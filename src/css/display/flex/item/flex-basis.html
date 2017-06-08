@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            border: 1px solid #FF0033;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .tip {
+            margin: 10px;
+        }
+
+        .parent {
+            display: flex;
+            margin: 10px;
+            background-color: #89479B;
+            height: 300px;
+        }
+
+        .child {
+            height: 100px;
+            background-color: #E88024;
+        }
+
+        .child:nth-child(1) {
+            min-height: 100px;
+            font-size: 12px;
+            background-color: #FFCC33;
+        }
+
+        .child:nth-child(2) {
+            min-height: 120px;
+            font-size: 14px;
+            background-color: #FF0033;
+        }
+
+        .child:nth-child(3) {
+            min-height: 180px;
+            font-size: 16px;
+            background-color: #00CC33;
+        }
+
+        .child:nth-child(4) {
+            min-height: 130px;
+            font-size: 18px;
+            background-color: #229BE4;
+        }
+
+        .child:nth-child(5) {
+            min-height: 140px;
+            font-size: 20px;
+            background-color: #9900FF;
+        }
+
+        .flex-basis-auto {
+            flex-basis: auto;
+        }
+
+        .flex-basis-0 {
+            flex-basis: 0;
+        }
+
+        .flex-basis-100 {
+            flex-basis: 100px;
+        }
+
+        .flex-basis-200 {
+            flex-basis: 200px;
+        }
+
+        .flex-basis-300 {
+            flex-basis: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="tip">
+    <pre>
+        .item {
+            flex-basis: length | auto; /* default auto */
+        }
+    </pre>
+</div>
+<div class="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent">
+    <div class="child flex-basis-auto">1 flex-basis-auto</div>
+    <div class="child flex-basis-0">2 flex-basis-0</div>
+    <div class="child flex-basis-100">3 flex-basis-100px</div>
+    <div class="child flex-basis-200">4 flex-basis-200px</div>
+    <div class="child flex-basis-300">5 flex-basis-300px</div>
+</div>
+</body>
+</html>

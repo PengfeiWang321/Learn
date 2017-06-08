@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* scrollbar */
+        *::-webkit-scrollbar-track {
+            border: 1px solid #e7e7e7;
+            background-color: #ffffff;
+            border-bottom: none;
+            border-top: none;
+        }
+
+        *::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+            background-color: #ffffff;
+            border-bottom: none;
+            border-color: #e7e7e7;
+        }
+
+        *::-webkit-scrollbar:horizontal {
+            width: 8px;
+            height: 8px;
+            background-color: #ffffff;
+            border-bottom: none;
+            border-color: #e7e7e7;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            border-color: #e7e7e7;
+            border-bottom: none;
+            background-color: #dedede;
+        }
+    </style>
+    <style>
+        .small {
+            height: 400px;
+            width: 500px;
+            overflow: auto;
+            background-color: #229be4;
+        }
+
+        .big {
+            width: 1000px;
+            height: 1500px;
+            background-color: #FF0033;
+        }
+
+        .big .small {
+            height: 300px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body class="">
+<div class="small">
+    <div class="big">
+        <div class="small">
+            请滚动
+        </div>
+    </div>
+</div>
+</body>
+</html>

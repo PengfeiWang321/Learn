@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div.content {
+            background-color: #229be4;
+            height: 300px;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #9900FF;
+        }
+
+        div.float-right {
+            float: right;
+            background-color: #00CC33;
+            height: 100px;
+            width: 100px;
+            border: 1px solid #9900FF;
+        }
+
+        div.float-left {
+            float: left;
+            background-color: #FF0033;
+            height: 100px;
+            width: 100px;
+            border: 1px solid #9900FF;
+        }
+
+        div.after {
+            width: 100px;
+            height: 30px;
+            background-color: #FFCC33;
+            display: inline-block;
+        }
+
+        div.clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="float-left">float-left</div>
+    <div class="float-right">float-right1</div>
+    <div class="float-right">float-right2</div>
+</div>
+<div class="content">
+    <div class="float-right">float-right</div>
+    <div class="after">after</div>
+
+
+</div>
+<div class="content">
+    <div class="float-right">float-right</div>
+    <div class="clear">clear</div>
+    <div class="after">after</div>
+</div>
+</body>
+</html>

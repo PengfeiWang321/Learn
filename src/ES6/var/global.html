@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+         ES5的顶层对象，本身也是一个问题，因为它在各种实现里面是不统一的。
+         浏览器里面，顶层对象是window，但 Node 和 Web Worker 没有window。
+         浏览器和 Web Worker 里面，self也指向顶层对象，但是Node没有self。
+         Node 里面，顶层对象是global，但其他环境都不支持。
+         同一段代码为了能够在各种环境，都能取到顶层对象，现在一般是使用this变量，但是有局限性。
+         很难找到一种方法，可以在所有情况下，都取到顶层对象。下面是勉强可以使用的方法。
+         */
+        var getGlobal = function () {
+            if (typeof self !== 'undefined') { return self; }
+            if (typeof window !== 'undefined') { return window; }
+            if (typeof global !== 'undefined') { return global; }
+            throw new Error('unable to locate global object');
+        };
+        // CommonJS的写法
+        var global = require('system.global')();
+        // ES6模块的写法
+        import getGlobal from 'system.global';
+        const global = getGlobal();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

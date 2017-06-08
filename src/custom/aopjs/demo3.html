@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/aop.js"></script>
+    <script>
+        function a(){console.info('a');}
+        function b(){console.info('b');}
+        function c(a,b,c){console.info(a+b+c);}
+        function d(){console.info();}
+        b = b.before(a);
+        b();
+        console.info('--------------------');
+        b = b.testbefore(a);
+        b();
+        console.info('--------------------');
+        d = d.before(c);
+        d(1,2,3);
+        console.info('--------------------');
+        d = d.testbefore(c);
+        d(1,2,3);
+    </script>
+</head>
+<body>
+<pre>
+        function a(){console.info('a');}
+        function b(){console.info('b');}
+        function c(a,b,c){console.info(a+b+c);}
+        function d(){console.info();}
+        b = b.before(a);
+        b();
+        console.info('--------------------');
+        b = b.testbefore(a);
+        b();
+        console.info('--------------------');
+        d = d.before(c);
+        d(1,2,3);
+        console.info('--------------------');
+        d = d.testbefore(c);
+        d(1,2,3);
+</pre>
+</body>
+</html>

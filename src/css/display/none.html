@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div.content {
+            background-color: #229BE4;
+            height: 300px;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #9900FF;
+        }
+        div.none {
+            width: 100px;
+            height: 30px;
+            background-color: #FF0033;
+            display: none;
+        }
+        div.hidden {
+            width: 100px;
+            height: 30px;
+            background-color: #00CC33;
+            visibility: hidden;
+        }
+        div.transparent{
+            width: 100px;
+            height: 30px;
+            background-color: transparent;
+        }
+        div.opacity{
+            width: 100px;
+            height: 30px;
+            opacity: 0;
+        }
+        div.after{
+            width: 100px;
+            height: 30px;
+            background-color: #FFCC33;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="none">none</div>
+    <div class="after">after</div>
+</div>
+<div class="content">
+    <div class="hidden">hidden</div>
+    <div class="after">after</div>
+</div>
+<div class="content">
+    <div class="transparent">transparent</div>
+    <div class="after">after</div>
+</div>
+<div class="content">
+    <div class="opacity">opacity</div>
+    <div class="after">after</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            border: 1px solid #FF0033;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .tip {
+            margin: 10px;
+        }
+
+        .parent {
+            display: flex;
+            margin: 10px;
+            background-color: #89479B;
+            height: 200px;
+            width: 200px;
+        }
+
+        .child {
+            width: 99px;
+            height: 99px;
+            background-color: #E88024;
+        }
+
+        .nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+<div class="tip">
+    <pre>
+        .box {
+            flex-wrap: nowrap | wrap | wrap-reverse;
+        }
+    </pre>
+</div>
+<div class="parent nowrap">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+</div>
+<div class="parent wrap">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+</div>
+<div class="parent wrap-reverse">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+</div>
+</body>
+</html>

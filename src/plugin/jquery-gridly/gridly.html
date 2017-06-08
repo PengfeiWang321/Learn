@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.gridly.js" type="text/javascript"></script>
+    <link href="stylesheets/jquery.gridly.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .gridly > div {
+            background-color: black;
+            color: red;
+            font-size: 40px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 140px;
+        }
+
+        .brick.small {
+            width: 140px;
+            height: 140px;
+        }
+
+        .brick.large {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="gridly">
+    <div class="brick small">1</div>
+    <div class="brick small">2</div>
+    <div class="brick small">3</div>
+    <div class="brick small">4</div>
+    <div class="brick small">5</div>
+    <div class="brick small">6</div>
+</div>
+
+<script>
+    var reordering = function ($elements) {
+        // 开始拖动的回调事件
+        // Called before the drag and drop starts with the elements in their starting position.
+    };
+
+    var reordered = function ($elements, $dragged) {
+        // 结束拖动的回调事件
+        // Called after the drag and drop ends with the elements in their ending position.
+    };
+
+    $('.gridly').gridly({
+        base: 60, // px
+        gutter: 20, // px
+        columns: 6,
+        callbacks: {reordering: reordering, reordered: reordered}
+    });
+</script>
+</body>
+</html>

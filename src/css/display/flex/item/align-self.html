@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            border: 1px solid #FF0033;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .tip {
+            margin: 10px;
+        }
+
+        .parent {
+            display: flex;
+            margin: 10px;
+            background-color: #89479B;
+            height: 300px;
+        }
+
+        .child {
+            width: 200px;
+            height: 100px;
+            background-color: #E88024;
+        }
+
+        .child:nth-child(1) {
+            min-height: 100px;
+            font-size: 12px;
+            background-color: #FFCC33;
+        }
+
+        .child:nth-child(2) {
+            min-height: 120px;
+            font-size: 14px;
+            background-color: #FF0033;
+        }
+
+        .child:nth-child(3) {
+            min-height: 180px;
+            font-size: 16px;
+            background-color: #00CC33;
+        }
+
+        .child:nth-child(4) {
+            min-height: 130px;
+            font-size: 18px;
+            background-color: #229BE4;
+        }
+
+        .child:nth-child(5) {
+            min-height: 140px;
+            font-size: 20px;
+            background-color: #9900FF;
+        }
+
+        .auto {
+            align-self: auto;
+        }
+
+        .flex-start {
+            align-self: flex-start;
+        }
+
+        .flex-end {
+            align-self: flex-end;
+        }
+
+        .center {
+            align-self: center;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+    </style>
+</head>
+<body>
+<div class="tip">
+    <pre>
+        .item {
+           align-self: auto | flex-start | flex-end | center | baseline | stretch;
+        }
+    </pre>
+</div>
+<div class="parent">
+    <div class="child auto">1 align-self:auto</div>
+    <div class="child">2</div>
+    <div class="child auto">3 align-self:auto</div>
+    <div class="child">4</div>
+    <div class="child auto">5 align-self:auto</div>
+</div>
+<div class="parent">
+    <div class="child flex-start">1 align-self:flex-start</div>
+    <div class="child">2</div>
+    <div class="child flex-start">3 align-self:flex-start</div>
+    <div class="child">4</div>
+    <div class="child flex-start">5 align-self:flex-start</div>
+</div>
+<div class="parent">
+    <div class="child flex-end">1 align-self:flex-end</div>
+    <div class="child">2</div>
+    <div class="child flex-end">3 align-self:flex-end</div>
+    <div class="child">4</div>
+    <div class="child flex-end">5 align-self:flex-end</div>
+</div>
+<div class="parent">
+    <div class="child center">1 align-self:center</div>
+    <div class="child">2</div>
+    <div class="child center">3 align-self:center</div>
+    <div class="child">4</div>
+    <div class="child center">5 align-self:center</div>
+</div>
+<div class="parent">
+    <div class="child baseline">1 align-self:baseline</div>
+    <div class="child ">2</div>
+    <div class="child baseline">3 align-self:baseline</div>
+    <div class="child">4</div>
+    <div class="child baseline">5 align-self:baseline</div>
+</div>
+<div class="parent">
+    <div class="child stretch">1 align-self:stretch</div>
+    <div class="child">2</div>
+    <div class="child stretch">3 align-self:stretch</div>
+    <div class="child">4</div>
+    <div class="child stretch">5 align-self:stretch</div>
+</div>
+</body>
+</html>

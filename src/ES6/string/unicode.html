@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //字符的Unicode表示法
+        console.info("\u0061");// "a"
+        console.info("\uD842\uDFB7");// "𠮷"
+        //如果直接在\u后面跟上超过0xFFFF的数值（比如\u20BB7），JavaScript会理解成\u20BB+7。由于\u20BB是一个不可打印字符，所以只会显示一个空格，后面跟着一个7。
+        console.info("\u20BB7");// " 7"
+
+        //ES6 对这一点做出了改进，只要将码点放入大括号，就能正确解读该字符。
+        console.info("\u{20BB7}");// "𠮷"
+
+        console.info("\u{41}\u{42}\u{43}");// "ABC"
+
+        let hello = 123;
+        console.info(hell\u{6F});// 123
+
+        console.info('\u{1F680}' === '\uD83D\uDE80');// true
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

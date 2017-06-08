@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            background-color: #229be4;
+            height: 30px;
+            width: 30px;
+            margin: 10px;
+            padding: 5px;
+            border: 5px solid #FF0033;
+        }
+        div#a {
+            box-sizing: content-box;
+        }
+        div#b {
+            box-sizing: border-box;
+        }
+        div#c {
+            box-sizing: padding-box;//只支持firefox
+        }
+    </style>
+</head>
+<body>
+<pre>
+    div {
+    background-color: #229be4;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    padding: 5px;
+    border: 5px solid #FF0033;
+    }
+    div#a {
+    box-sizing: content-box;
+    }
+</pre>
+<div id="a"></div>
+<pre>
+    div#b {
+    box-sizing: border-box;
+    }
+</pre>
+<div id="b"></div>
+<pre>
+    div#c {
+    box-sizing: padding-box;//只支持firefox
+    }
+</pre>
+<div id="c"></div>
+</body>
+</html>

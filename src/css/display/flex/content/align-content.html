@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            border: 1px solid #FF0033;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .tip {
+            margin: 10px;
+        }
+
+        .parent {
+            display: flex;
+            margin: 10px;
+            background-color: #89479B;
+            height: 300px;
+            width: 600px;
+            flex-wrap: wrap;
+        }
+
+        .child {
+            background-color: #E88024;
+            width: 299px;
+            min-height: 50px;
+        }
+
+        .flex-start {
+            align-content: flex-start;
+        }
+
+        .flex-end {
+            align-content: flex-end;
+        }
+
+        .center {
+            align-content: center;
+        }
+
+        .space-between {
+            align-content: space-between;
+        }
+
+        .space-around {
+            align-content: space-around;
+        }
+
+        .stretch {
+            align-content: stretch;
+        }
+    </style>
+</head>
+<body>
+<div class="tip">
+    <pre>
+        .box {
+            align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+        }
+    </pre>
+</div>
+<div class="parent flex-start">
+    <div class="child">align-content: flex-start 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent flex-end">
+    <div class="child">align-content: flex-end 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent center">
+    <div class="child">align-content: center 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent space-between">
+    <div class="child">align-content: space-between 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent space-around">
+    <div class="child">align-content: space-around 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent stretch">
+    <div class="child">align-content: stretch 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function () {
+            //color,gradient,pattern
+            var c1 = document.getElementById('c1');
+            var ctx1 = c1.getContext('2d');
+            ctx1.fillStyle = 'red';
+            ctx1.fillRect(200, 20, 100, 10);//X,Y,width,height
+
+            var c2 = document.getElementById('c2');
+            var ctx2 = c2.getContext('2d');
+            ctx2.fillStyle = '#0000FF';
+            ctx2.fillRect(200, 20, 100, 10);//X,Y,width,height
+
+            var c3 = document.getElementById('c3');
+            var ctx3 = c3.getContext('2d');
+            /*
+             LinearGradient(float x0, float y0, float x1, float y1)
+             参数:
+             float x0: 渐变起始点x坐标
+             float y0:渐变起始点y坐标
+             float x1:渐变结束点x坐标
+             float y1:渐变结束点y坐标
+             */
+            var lg = ctx3.createLinearGradient(200, 20, 300, 20);
+            lg.addColorStop(0, 'red');
+            lg.addColorStop(0.5, 'green');
+            lg.addColorStop(1, 'blue');
+            ctx3.fillStyle = lg;
+            ctx3.fillRect(200, 20, 100, 10);//X,Y,width,height
+
+            var img = document.getElementById("lamp");
+            var c4 = document.getElementById('c4');
+            var ctx4 = c4.getContext('2d');
+            var pat = ctx.createPattern(img, "repeat");//repeat|repeat-x|repeat-y|no-repeat
+            ctx4.fillStyle = pat;
+            ctx4.fillRect(200, 20, 100, 10);//X,Y,width,height
+        }
+    </script>
+</head>
+<body>
+<canvas id="c1"></canvas>
+<canvas id="c2"></canvas>
+<canvas id="c3"></canvas>
+<canvas id="c4"></canvas>
+</body>
+</html>

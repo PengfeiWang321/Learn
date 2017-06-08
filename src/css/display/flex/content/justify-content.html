@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            border: 1px solid #FF0033;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .tip {
+            margin: 10px;
+        }
+
+        .parent {
+            display: flex;
+            margin: 10px;
+            background-color: #89479B;
+            height: 150px;
+        }
+
+        .child {
+            width: 99px;
+            height: 100px;
+            background-color: #E88024;
+        }
+
+        .flex-start {
+            justify-content: flex-start;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .center {
+            justify-content: center;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .space-around {
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+<div class="tip">
+    <pre>
+        .box {
+            justify-content: flex-start | flex-end | center | space-between | space-around;
+        }
+    </pre>
+</div>
+<div class="parent flex-start">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent flex-end">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent center">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent space-between">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent space-around">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+</body>
+</html>

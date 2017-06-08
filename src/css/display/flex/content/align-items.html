@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            border: 1px solid #FF0033;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .tip {
+            margin: 10px;
+        }
+
+        .parent {
+            display: flex;
+            margin: 10px;
+            background-color: #89479B;
+            height: 300px;
+        }
+
+        .child {
+            background-color: #E88024;
+            width: 200px;
+        }
+
+        .flex-start {
+            align-items: flex-start;
+        }
+
+        .flex-end {
+            align-items: flex-end;
+        }
+
+        .center {
+            align-items: center;
+        }
+
+        .baseline {
+            align-items: baseline;
+        }
+
+        .stretch {
+            align-items: stretch;
+        }
+
+        .child:nth-child(1) {
+            min-height: 100px;
+            font-size: 12px;
+        }
+
+        .child:nth-child(2) {
+            min-height: 120px;
+            font-size: 14px;
+        }
+
+        .child:nth-child(3) {
+            min-height: 180px;
+            font-size: 16px;
+        }
+
+        .child:nth-child(4) {
+            min-height: 130px;
+            font-size: 18px;
+        }
+
+        .child:nth-child(5) {
+            min-height: 140px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="tip">
+    <pre>
+        .box {
+            align-items: flex-start | flex-end | center | baseline | stretch;
+        }
+    </pre>
+</div>
+<div class="parent flex-start">
+    <div class="child">align-items: flex-start 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent flex-end">
+    <div class="child">align-items: flex-end 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent center">
+    <div class="child">align-items: center 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent baseline">
+    <div class="child">align-items: baseline 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+<div class="parent stretch">
+    <div class="child">align-items: stretch 1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+</div>
+</body>
+</html>

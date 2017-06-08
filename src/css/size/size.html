@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div.box {
+            background-color: #229be4;
+            margin: 10px;
+        }
+        div#parent {
+            font-size: 20px;
+            background-color: #FF0033;
+        }
+        div.c_px {
+            height: 16px;
+            width: 16px;
+        }
+        div.c_em {
+            height: 1em;
+            width: 1em;
+        }
+        div.c_rem {
+            height: 1rem;
+            width: 1rem;
+        }
+    </style>
+</head>
+<body>
+<p>
+    默认字体16px;1em=16px;1rem=16px;
+    em和rem的区别在于em是相对于其父元素来设置字体大小的，这样就会存在一个问题，进行任何元素设置，都有可能需要知道他父元素的大小。
+    而Rem是相对于根元素html，这样就意味着，我们只需要在根元素确定一个参考值。
+</p>
+<div>20px</div>
+<div id="parent">
+    <div class="box c_px"></div>
+    <div class="box c_em"></div>
+    <div class="box c_rem"></div>
+</div>
+<div>默认</div>
+<div class="box c_px"></div>
+<div class="box c_em"></div>
+<div class="box c_rem"></div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿已移除的元素
+以下的 HTML 4.01 元素在HTML5中已经被删除:
+<acronym>
+<applet>
+<basefont>
+<big>
+<center>
+<dir>
+<font>
+<frame>
+<frameset>
+<noframes>
+<strike>
+<tt>

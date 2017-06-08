@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/aop.js"></script>
+    <script>
+        function a(){console.info('a');}
+        function b(){console.info('b');}
+        function c(){console.info('c');}
+        b = b.before(a).after(c);
+        b();
+    </script>
+</head>
+<body>
+<pre>
+        function a(){console.info('a');}
+        function b(){console.info('b');}
+        function c(){console.info('c');}
+        b = b.before(a).after(c);
+        b();
+</pre>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/aop.js"></script>
+    <script>
+        function a(who) {
+            if (who === 'a') {
+                console.info('我a的锅');
+                return this;
+            } else {
+                console.info('b的锅?');
+                return null;
+            }
+        }
+        function b(who) {
+            if (who === 'b') {
+                console.info('我b的锅');
+                return this;
+            } else {
+                console.info('c的锅?');
+                return null;
+            }
+        }
+        function c(who) {
+            if (who === 'c') {
+                console.info('我c的锅');
+                return this;
+            } else {
+                console.info('找不到锅?');
+                return null;
+            }
+        }
+        a = a.afterChain(b).afterChain(c);
+        a('a');
+        console.info('--------------------');
+        a('b');
+        console.info('--------------------');
+        a('c');
+        console.info('--------------------');
+        a('d');
+        console.info('--------------------');
+    </script>
+</head>
+<body>
+<pre>
+        function a(who){
+            if(who==='a'){
+                console.info('我a的锅');
+                return this;
+            }else{
+                console.info('b的锅?');
+                return null;
+            }
+        }
+        function b(who){
+            if(who==='b'){
+                console.info('我b的锅');
+                return this;
+            }else{
+                console.info('c的锅?');
+                return null;
+            }
+        }
+        function c(who){
+            if(who==='c'){
+                console.info('我c的锅');
+                return this;
+            }else{
+                console.info('找不到锅?');
+                return null;
+            }
+        }
+        a = a.afterChain(b).afterChain(c);
+        a('a');
+        console.info('--------------------');
+        a('b');
+        console.info('--------------------');
+        a('c');
+        console.info('--------------------');
+        a('d');
+        console.info('--------------------');
+</pre>
+</body>
+</html>

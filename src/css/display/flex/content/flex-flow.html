@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            border: 1px solid #FF0033;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        .tip {
+            margin: 10px;
+        }
+
+        .parent {
+            display: flex;
+            margin: 10px;
+            background-color: #89479B;
+            height: 200px;
+            width: 200px;
+        }
+
+        .child {
+            width: 99px;
+            height: 99px;
+            background-color: #E88024;
+        }
+
+        .flex-flow {
+            flex-flow: column wrap;
+        }
+    </style>
+</head>
+<body>
+<div class="tip">
+    <pre>
+        .box {
+            flex-flow: (row | row-reverse | column | column-reverse) (nowrap | wrap | wrap-reverse);
+        }
+        flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+    </pre>
+</div>
+<div class="parent flex-flow">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+</div>
+</body>
+</html>

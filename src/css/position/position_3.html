@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            background-color: #229be4;
+            height: 300px;
+            width: 400px;
+        }
+
+        div.absolute {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #229be4;
+        }
+
+        div.fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #FF0033;
+        }
+
+        div.relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #FFCC33;
+        }
+
+        div.static {
+            position: static;
+            background-color: #00CC33;
+        }
+
+        div.inherit {
+            position: inherit;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background-color: #9900FF;
+        }
+    </style>
+</head>
+<body>
+<div class="absolute">
+    <pre>
+        .absolute {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #229be4;
+        }
+    </pre>
+    <div class="inherit">
+    <pre>
+        .absolute .inherit {
+            position: inherit;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background-color: #9900FF;
+        }
+    </pre>
+    </div>
+</div>
+<div class="fixed">
+    <pre>
+        .fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #FF0033;
+        }
+    </pre>
+    <div class="inherit">
+    <pre>
+        .fixed .inherit {
+            position: inherit;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background-color: #9900FF;
+        }
+    </pre>
+    </div>
+</div>
+<div class="static">
+    <pre>
+        .static {
+            position: static;
+            background-color: #00CC33;
+        }
+    </pre>
+    <div class="inherit">
+    <pre>
+        .static .inherit {
+            position: inherit;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background-color: #9900FF;
+        }
+    </pre>
+    </div>
+</div>
+<div class="relative">
+    <pre>
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #FFCC33;
+        }
+    </pre>
+    <div class="inherit">
+    <pre>
+        .relative .inherit {
+            position: inherit;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background-color: #9900FF;
+        }
+    </pre>
+    </div>
+</div>
+</body>
+</html>
