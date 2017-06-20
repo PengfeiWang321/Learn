@@ -6,7 +6,7 @@
         }
         return __self.apply(this,arguments);//执行原函数
     }
-}
+};
 Function.prototype.after = function(func){
     var __self = this;
     return function(){
@@ -17,7 +17,7 @@ Function.prototype.after = function(func){
         func.apply(this,arguments);
         return ret;
     }
-}
+};
 Function.prototype.afterChain = function(func){
     var __self = this;
     return function(){
@@ -27,11 +27,11 @@ Function.prototype.afterChain = function(func){
         }
         return func.apply(this,arguments);
     }
-}
+};
 Function.prototype.testbefore = function(func){
     var __self = this;
     return function(){
         func(arguments);//执行新函数
         return __self(arguments);//执行原函数
     }
-}
+};

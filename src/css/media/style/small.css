@@ -1,0 +1,17 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.large{
+    display: none;
+}
+.middle{
+    display: none;
+}
+.small{
+    display: block;
+}
+.common{
+    color: yellow;
+}

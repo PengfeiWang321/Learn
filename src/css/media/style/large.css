@@ -1,0 +1,17 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.large{
+    display: block;
+}
+.middle{
+    display: none;
+}
+.small{
+    display: none;
+}
+.common{
+    color: red;
+}

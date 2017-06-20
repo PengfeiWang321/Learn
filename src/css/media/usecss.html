@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /*宽度500px-800px之间+高度100px-400px之间 蓝色*/
+        body{
+            background:blue;
+        }
+        /*宽度小于500px时 绿色*/
+        @media screen and (max-width: 500px) {
+            body {
+                background: green;
+            }
+        }
+        /*宽度大于800px时 红色*/
+        @media screen and (min-width: 800px) {
+            body {
+                background: red;
+            }
+        }
+        /*高度小于100px时 黄色*/
+        @media screen and (max-height: 100px) {
+            body {
+                background: yellow;
+            }
+        }
+        /*高度大于400px时 粉色*/
+        @media screen and (min-height: 400px) {
+            body {
+                background: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+<p>效果演示，请缩小/扩大浏览器的窗口大小注意背景色的变化。逻辑如下：</p>
+<p>/*宽度500px-800px之间+高度100px-400px之间 蓝色*/</p>
+<p>/*宽度小于500px时 绿色*/</p>
+<p>/*宽度大于800px时 红色*/</p>
+<p>/*高度小于100px时 黄色*/</p>
+<p>/*高度大于400px时 粉色*/</p>
+</body>
+</html>

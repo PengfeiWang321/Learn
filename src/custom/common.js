@@ -51,8 +51,8 @@
             //对象
             if (arguments[0] instanceof Object && arguments[1] instanceof Object) {
                 var result = true;
-                var attributeLengthA = getLength(arguments[0]);
-                var attributeLengthB = getLength(arguments[1]);
+                var attributeLengthA = object().getLength(arguments[0]);
+                var attributeLengthB = object().getLength(arguments[1]);
                 //如果两个对象的属性数目不等，则两个对象也不等
                 if (attributeLengthA !== attributeLengthB) {
                     result = false;
