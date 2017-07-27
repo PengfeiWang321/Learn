@@ -1,24 +1,34 @@
-﻿<style>
-    ul {
-        border:1px solid red;
-        padding:0px;
-        display:flex;
-        list-style:none;
-        flex-flow:row wrap;
-    }
-    ul li {
-        flex:1;
-        min-width:100px;
-        max-width:150px;
-        height:100px;
-        background:#CCC;
-        margin:4px;
-    }
-</style>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout.html</title>
+    <style>
+        ul {
+            border: 1px solid red;
+            padding: 0px;
+            display: flex;
+            list-style: none;
+            flex-flow: row wrap;
+        }
+
+        ul li {
+            flex: 1;
+            min-width: 100px;
+            max-width: 150px;
+            height: 100px;
+            background: #CCC;
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
 <div>
-flex 的行为是让盒子尽可能地填满一行，所以使用 flex 我们就有了让元素充满行的保障。但设置了 flex 的元素对 width 就不太买账了，于是要使用比它更严肃的 max-width 和 min-width 来设置
+    flex 的行为是让盒子尽可能地填满一行，所以使用 flex 我们就有了让元素充满行的保障。但设置了 flex 的元素对 width 就不太买账了，于是要使用比它更严肃的 max-width 和 min-width 来设置
 </div>
 <ul>
-<li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-<li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
 </ul>
+</body>
+</html>
