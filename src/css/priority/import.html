@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>import.html</title>
+    <style type="text/css">
+        @import url(style2.css);
+    </style>
+    <!-- 设置：.import{color:blue;} -->
+    <!-- 内嵌样式、内部样式 -->
+    <style type="text/css">
+        .embed {
+            color: indigo;
+        }
+    </style>
+    <!-- 链接样式、外部样式 -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!-- 设置：link{color:green;} -->
+    <!-- 导入样式 -->
+
+</head>
+<body>
+<div>
+    <p style="color: red">内联样式、行内样式(红色)</p>
+    <p class="embed">内嵌样式、内部样式(紫色)</p>
+    <p class="link">链接样式、外部样式(绿色)</p>
+    <p class="import">导入样式(蓝色)</p>
+</div>
+<!-- 内联样式、行内样式 -->
+<h3 class="embed link import" style="color: red">测试 内联>内嵌>链接>导入</h3>
+<h3 class="link embed ">测试 内嵌>链接</h3>
+<h3 class="link embed  import">测试 内嵌>链接>导入</h3>
+<h3 class="link import">测试 链接>导入</h3>
+</body>
+</html>

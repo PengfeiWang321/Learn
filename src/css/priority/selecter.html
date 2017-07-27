@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selecter.html</title>
+    <style type="text/css">
+        /**权值=2*100+2*1=202*/
+        #content div#main-content h2 {
+            color: red;
+        }
+
+        /**权值=2*100+1=201*/
+        #content #main-content > h2 {
+            color: blue;
+        }
+
+        /**权值=1*100+1*10+3*1=113*/
+        body #content div[id="main-content"] h2 {
+            color: green;
+        }
+
+        /**权值=1*100+1*10+2*1=112*/
+        #main-content div.paragraph h2 {
+            color: orange;
+        }
+
+        /**权值=1*100+1*10+1*1=111*/
+        #main-content [class="paragraph"] h2 {
+            color: yellow;
+        }
+
+        /**权值=1*100+2*10+3*1=123*/
+        div#main-content div.paragraph h2.first {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="main-content">
+        <h2>CSS简介</h2>
+        <p>CSS（Cascading Style Sheet，可译为“层叠样式表”或“级联样式表”）是一组格式设置规则，用于控制Web页面的外观。</p>
+        <div class="paragraph">
+            <h2 class="first">使用CSS布局的优点</h2>
+            <p>1、表现和内容相分离 2、提高页面浏览速度 3、易于维护和改版 4、使用CSS布局更符合现在的W3C标准.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

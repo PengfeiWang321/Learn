@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>important.html</title>
+    <style type="text/css">
+        #header nav ul li.current {
+            color: red !important;
+            font-weight: bold;
+        }
+
+        li:hover {
+            color: blue !important;
+            font-weight: normal !important;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <pre>
+        #header nav ul li.current {
+        color: red ;
+        font-weight: bold;
+        }
+
+        li:hover {
+        color: blue !important;
+        font-weight: normal;
+        }
+    </pre>
+</div>
+<div id="header">
+    <nav>
+        <ul>
+            <li class="current">
+                我是什么颜色？什么字体？
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
