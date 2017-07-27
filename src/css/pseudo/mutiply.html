@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>mutiply.html</title>
+    <style>
+        p:lang(en)::after{
+            content: " (English) ";
+        }
+        p:lang(de)::after{
+            content: " (German) ";
+        }
+        p:lang(fr)::after{
+            content: " (French) ";
+        }
+        p:not(:lang(fr)):not(:lang(de)):not(:lang(en))::after{
+            content: " (Unrecognized language) ";
+        }
+    </style>
+</head>
+<body>
+<p lang="en">hello world</p>
+<p lang="de">hallo welt</p>
+<p lang="fr">bonjour, monde</p>
+<p>嘤嘤嘤嘤</p>
+</body>
+</html>

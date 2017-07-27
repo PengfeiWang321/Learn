@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>brackets.html</title>
+    <style>
+        body {
+            background-color: #229be4;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            outline: none;
+            text-decoration: none;
+            color: #FFF;
+            font-size: 32px;
+            padding: 5px 40px;
+        }
+        a:hover::before, a:hover::after { position: absolute; }
+        a:hover::before { content: "\5B"; left: 20px; }
+        a:hover::after { content: "\5D"; right:  20px; }
+    </style>
+</head>
+<body>
+<a>Pull requests</a>
+<a>Issues</a>
+<a>Marketplace</a>
+<a>Gist</a>
+</body>
+</html>

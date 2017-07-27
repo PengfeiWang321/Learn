@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .content{
+            background-color: blue;
+            border: solid #666 1px;
+            font-size: 30px;
+        }
+
+        .clearfix::after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .left {
+            background-color: red;
+            border: solid #666 1px;
+            float: left;
+            display: inline;
+        }
+
+        .right {
+            background-color: green;
+            border: solid #666 1px;
+            float: right;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+
+
+<div class="main">
+    <div class="right">
+        right1
+    </div>
+    <div class="right">
+        right2
+    </div>
+</div>
+<div class="footer">
+    <p>我是底部</p>
+</div>
+</div>
+<div class="content">
+<div class="main clearfix">
+    <div class="right">
+        right1
+    </div>
+    <div class="right">
+        right2
+    </div>
+</div>
+<div class="footer">
+    <p>我是底部</p>
+</div>
+</div>
+</body>
+</html>

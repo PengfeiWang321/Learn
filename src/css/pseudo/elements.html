@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>elements.html</title>
+    <style>
+        p::first-letter {color:#FF0000} /* 第一个字 */
+        p::first-line {color: #00FF00} /* 第一行 */
+        p::before {content:'注意：'} /* 在前面插入内容 */
+        p::after {content:'------------------华丽的分割线------------------'} /* 在后面插入内容 */
+    </style>
+</head>
+<body>
+    <p>
+        注释："first-line" 伪元素只能用于块级元素。<br>
+        注释：下面的属性可应用于 "first-line" 伪元素：<br>
+        font<br>
+        color<br>
+        background<br>
+        word-spacing<br>
+        letter-spacing<br>
+        text-decoration<br>
+        vertical-align<br>
+        text-transform<br>
+        line-height<br>
+        clear<br>
+    </p>
+    <p>
+        注释："first-letter" 伪元素只能用于块级元素。<br>
+        注释：下面的属性可应用于 "first-letter" 伪元素：<br>
+        font<br>
+        color<br>
+        background<br>
+        margin<br>
+        padding<br>
+        border<br>
+        text-decoration<br>
+        vertical-align (仅当 float 为 none 时)<br>
+        text-transform<br>
+        line-height<br>
+        float<br>
+        clear<br>
+    </p>
+</body>
+</html>

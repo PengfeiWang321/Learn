@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bubble.html</title>
+    <style>
+        .bubble {
+            position: relative;
+            width: 150px;
+            height: 36px;
+            border: black solid 1px;
+            border-radius: 5px;
+            background-color: rgb(245, 245, 245);
+        }
+
+        .bubble:before, .bubble:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 8px;
+            width: 0;
+            height: 0;
+            border: 6px transparent solid;
+        }
+
+        .bubble:before {
+            left: -11px;
+            border-right-color: rgb(245, 245, 245);
+            z-index: 1;
+        }
+
+        .bubble:after {
+            left: -12px;
+            border-right-color: rgb(0, 0, 0);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="bubble">你好</div>
+</body>
+</html>

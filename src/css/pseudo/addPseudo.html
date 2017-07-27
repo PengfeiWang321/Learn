@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addPsedo.html</title>
+    <style>
+        .demo {
+            width: 300px;
+            height: 26px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .demo ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .demo ul li {
+            border: 1px solid #ccc;
+            padding: 2px;
+            float: left;
+            margin-right: 4px;
+            list-style-type: none;
+        }
+
+        .demo a {
+            float: left;
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            width: 20px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: blue;
+            color: green;
+            text-decoration: none;
+        }
+        .c1 li:first-child  {background-color:#FF0000} /* 选择某个元素的第一个子元素 */
+        .c1 li:last-child {background-color:#FF0000} /* 选择某个元素的最后一个子元素 */
+
+        .c2 li:first-of-type {background-color:#FF0000} /* 选择一个上级元素下的第一个同类子元素 */
+        .c2 li:last-of-type {background-color:#FF0000} /* 选择一个上级元素的最后一个同类子元素 */
+
+        .c3 li:nth-child(odd) {background-color:#FF0000} /* 选择某个元素的一个或多个特定的子元素 */
+        .c4 li:nth-last-child(even) {background-color:#FF0000} /* 选择某个元素的一个或多个特定的子元素，从这个元素的最后一个子元素开始算 */
+        .c5 li:nth-of-type(3n+1) {background-color:#FF0000} /* 选择指定的元素 */
+        .c6 li:nth-last-of-type(3n) {background-color:#FF0000} /* 选择指定的元素，从元素的最后一个开始计算 */
+
+        .c7 li:only-child {background-color:#FF0000} /* 选择的元素是它的父元素的唯一一个了元素 */
+        .c8 li:only-of-type {background-color:#FF0000} /* 选择一个元素是它的上级元素的唯一一个相同类型的子元素 */
+        .c9 li a:empty {background-color:#FF0000} /* 选择的元素里面没有任何内容 */
+    </style>
+</head>
+<body>
+<div class="demo c1">
+    <ul>
+        <li><a href="">1</a></li><li><a href="">2</a></li><li><a href="">3</a></li><li><a href="">4</a></li><li><a href="">5</a></li>
+        <li><a href="">6</a></li><li><a href="">7</a></li><li><a href="">8</a></li><li><a href="">9</a></li><li><a href="">10</a></li>
+    </ul>
+</div>
+<div class="demo c2">
+    <ul>
+        <li><a href="">1</a></li><li><a href="">2</a></li><li><a href="">3</a></li><li><a href="">4</a></li><li><a href="">5</a></li>
+        <li><a href="">6</a></li><li><a href="">7</a></li><li><a href="">8</a></li><li><a href="">9</a></li><li><a href="">10</a></li>
+    </ul>
+</div>
+<div class="demo c3">
+    <ul>
+        <li><a href="">1</a></li><li><a href="">2</a></li><li><a href="">3</a></li><li><a href="">4</a></li><li><a href="">5</a></li>
+        <li><a href="">6</a></li><li><a href="">7</a></li><li><a href="">8</a></li><li><a href="">9</a></li><li><a href="">10</a></li>
+    </ul>
+</div>
+<div class="demo c4">
+    <ul>
+        <li><a href="">1</a></li><li><a href="">2</a></li><li><a href="">3</a></li><li><a href="">4</a></li><li><a href="">5</a></li>
+        <li><a href="">6</a></li><li><a href="">7</a></li><li><a href="">8</a></li><li><a href="">9</a></li><li><a href="">10</a></li>
+    </ul>
+</div>
+<div class="demo c5">
+    <ul>
+        <li><a href="">1</a></li><li><a href="">2</a></li><li><a href="">3</a></li><li><a href="">4</a></li><li><a href="">5</a></li>
+        <li><a href="">6</a></li><li><a href="">7</a></li><li><a href="">8</a></li><li><a href="">9</a></li><li><a href="">10</a></li>
+    </ul>
+</div>
+<div class="demo c6">
+    <ul>
+        <li><a href="">1</a></li><li><a href="">2</a></li><li><a href="">3</a></li><li><a href="">4</a></li><li><a href="">5</a></li>
+        <li><a href="">6</a></li><li><a href="">7</a></li><li><a href="">8</a></li><li><a href="">9</a></li><li><a href="">10</a></li>
+    </ul>
+</div>
+<div class="demo c7">
+    <ul>
+        <li><a href="">1</a></li>
+    </ul>
+</div>
+<div class="demo c8">
+    <ul>
+        <li><a href="">1</a></li>
+    </ul>
+</div>
+<div class="demo c9">
+    <ul>
+        <li><a href="">1</a></li><li><a href=""></a></li><li><a href=""></a></li><li><a href=""></a></li><li><a href="">5</a></li>
+        <li><a href="">6</a></li><li><a href="">7</a></li><li><a href="">8</a></li><li><a href="">9</a></li><li><a href="">10</a></li>
+    </ul>
+</div>
+</body>
+</html>

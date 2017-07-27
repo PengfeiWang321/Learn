@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blockQuote.html</title>
+    <style>
+        blockquote::before {
+            content: open-quote;
+            position: absolute;
+            z-index: -1;
+            color: #DDD;
+            font-size: 120px;
+            font-family: serif;
+            font-weight: bolder;
+        }
+        blockquote::after {
+            content: close-quote;
+            position: absolute;
+            z-index: -1;
+            color: #DDD;
+            font-size: 120px;
+            font-family: serif;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+<blockquote>hello world</blockquote>
+</body>
+</html>
