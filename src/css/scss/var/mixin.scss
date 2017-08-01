@@ -1,0 +1,57 @@
+@charset "utf-8";
+/*混合器*/
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+notice {
+  background-color: green;
+  border: 2px solid #00aa00;
+  @include rounded-corners;
+}
+/*嵌套*/
+@mixin no-bullets {
+  list-style: none;
+  li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0px;
+  }
+}
+ul.plain {
+  color: #444;
+  @include no-bullets;
+}
+/*带参*/
+@mixin link-colors($normal, $hover, $visited) {
+  color: $normal;
+  &:hover { color: $hover; }
+  &:visited { color: $visited; }
+}
+a {
+  @include link-colors(blue, red, green);
+}
+.link {
+  @include link-colors(
+          $normal: blue,
+          $visited: green,
+          $hover: red
+  );
+}
+/*默认参数值*/
+@mixin link-colors(
+  $normal,
+  $hover: $normal,
+  $visited: green
+)
+{
+  color: $normal;
+  &:hover { color: $hover; }
+  &:visited { color: $visited; }
+}
+#link {
+  @include link-colors(
+          $normal: blue
+  );
+}

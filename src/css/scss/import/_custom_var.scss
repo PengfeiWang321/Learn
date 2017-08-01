@@ -1,0 +1,12 @@
+@charset "utf-8";
+//如果用户在导入你的sass局部文件之前声明了一个$fancybox-width变量，
+//那么你的局部文件中对$fancybox-width赋值400px的操作就无效。
+//如果用户没有做这样的声明，则$fancybox-width将默认为400px。
+$fancybox-width: 400px !default;
+.fancybox {
+  width: $fancybox-width;
+}
+$selectbox-width: 400px !default;
+.selectbox {
+  width: $selectbox-width;
+}

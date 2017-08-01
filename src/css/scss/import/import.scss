@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*默认变量值*/
+@import "var";
+@import "custom_var";
+/*嵌套导入*/
+.blue-theme {@import "nest";}
+/*原生css导入*/
+//三种情况下会生成原生的CSS@import，尽管这会造成浏览器解析css时的额外下载：
+//1.被导入文件的名字以.css结尾；
+//2.被导入文件的名字是一个URL地址（比如http://www.sass.hk/css/css.css），由此可用谷歌字体API提供的相应服务；
+//3.被导入文件的名字是CSS的url()值。
+//这就是说，你不能用sass的@import直接导入一个原始的css文件，因为sass会认为你想用css原生的@import。
+//但是，因为sass的语法完全兼容css，所以你可以把原始的css文件改名为.scss后缀，即可直接导入了。
+@import "native.css";
