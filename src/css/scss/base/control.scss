@@ -1,0 +1,60 @@
+@charset "utf-8";
+/*if*/
+@mixin blockOrHidden($boolean:true) {
+  @if $boolean {
+    @debug "$boolean is #{$boolean}";
+    display: block;
+  } @else {
+    @debug "$boolean is #{$boolean}";
+    display: none;
+  }
+}
+
+.block {
+  @include blockOrHidden;
+}
+
+.hidden {
+  @include blockOrHidden(false);
+}
+
+/*for*/
+/*for-through*/
+@for $i from 1 through 3 {
+  .item-through-#{$i} {
+    width: 2em * $i;
+  }
+}
+
+/*for-to*/
+@for $i from 1 to 3 {
+  .item-to-#{$i} {
+    width: 2em * $i;
+  }
+}
+
+/*while*/
+$types: 4;
+$type-width: 20px;
+
+@while $types > 0 {
+  .while-#{$types} {
+    width: $type-width + $types;
+  }
+  $types: $types - 1;
+}
+
+/*each*/
+$list: adam john wynn mason kuroir;
+
+@mixin author-images {
+  @each $author in $list {
+    .photo-#{$author} {
+      background: url("/images/avatars/#{$author}.png") no-repeat;
+    }
+  }
+}
+
+.author-bio {
+  @include author-images;
+}

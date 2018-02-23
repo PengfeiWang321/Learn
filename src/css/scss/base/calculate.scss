@@ -1,0 +1,53 @@
+@charset "utf-8";
+/*加减*/
+.box {
+  width: 20px + 8in;
+  height: 20px - 5px;
+}
+
+/*乘*/
+.box {
+  width: 10px * 2;
+}
+
+/*除*/
+p {
+  font: 10px/8px; // 纯 CSS，不是除法运算
+  $width: 1000px;
+  width: $width/2; // 使用了变量，是除法运算
+  width: round(1.5)/2; // 使用了函数，是除法运算
+  height: (500px/2); // 使用了圆括号，是除法运算
+  margin-left: 5px + 8px/2px; // 使用了加（+）号，是除法运算
+
+}
+
+/*变量*/
+$content-width: 720px;
+$sidebar-width: 220px;
+$gutter: 20px;
+.container {
+  width: $content-width + $sidebar-width + $gutter;
+  margin: 0 auto;
+}
+
+/*数字*/
+.box {
+  width: ((220px + 720px) - 11 * 20 ) / 12;
+}
+
+/*颜色*/
+p {
+  color: #020408 + #050104;
+  background-color: #010203 * 2;
+}
+
+/*通过加法符号“+”来对字符串进行连接*/
+$content: "Hello" + "" + "Sass!";
+.box:before {
+  content: " #{$content} ";
+}
+
+/*除了在变量中做字符连接运算之外，还可以直接通过 +，把字符连接在一起*/
+div {
+  cursor: e + -resize;
+}

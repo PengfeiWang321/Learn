@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*嵌套*/
+#content {
+  article {
+    h1 {
+      color: #333
+    }
+    p {
+      margin-bottom: 1.4em
+    }
+  }
+  aside {
+    background-color: #EEE
+  }
+}
+
+/*伪类*/
+article a {
+  color: blue;
+  &:hover {
+    color: red
+  }
+  &::before {
+    content: "http://"
+  }
+}
+
+/*翻转父类*/
+#content aside {
+  color: red;
+  body.ie & {
+    color: green
+  }
+}
+
+/*群组*/
+.container {
+  h1, h2, h3 {
+    margin-bottom: .8em
+  }
+}
+
+nav, aside {
+  a {
+    color: blue
+  }
+}
+
+article, section {
+  h1, h2, h3 {
+    color: blue
+  }
+}
+
+/*子组合选择器和同层组合选择器：>、+和~*/
+article {
+  ~ article {
+    border-top: 1px dashed #ccc
+  }
+  > section {
+    background: #eee
+  }
+  dl > {
+    dt {
+      color: #333
+    }
+    dd {
+      color: #555
+    }
+  }
+  nav + & {
+    margin-top: 0
+  }
+}
+
+/*嵌套属性*/
+nav {
+  border: {
+    style: solid;
+    width: 1px;
+    color: #ccc;
+  }
+}

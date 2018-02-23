@@ -1,0 +1,313 @@
+@charset "utf-8";
+/*字符串函数*/
+/*字符串函数-unquote() 函数主要是用来删除一个字符串中的引号，如果这个字符串没有带有引号，将返回原始的字符串。*/
+.test-unquote-1 {
+  content: unquote('Hello Sass!');
+}
+
+.test-unquote-2 {
+  content: unquote("'Hello Sass!");
+}
+
+.test-unquote-3 {
+  content: unquote("I'm Web Designer");
+}
+
+.test-unquote-4 {
+  content: unquote("'Hello Sass!'");
+}
+
+.test-unquote-5 {
+  content: unquote('"Hello Sass!"');
+}
+
+/*字符串函数-quote() 函数刚好与 unquote() 函数功能相反，主要用来给字符串添加引号。如果字符串，自身带有引号会统一换成双引号 ""*/
+.test-quote-1 {
+  content: quote('Hello Sass!');
+}
+
+.test-quote-2 {
+  content: quote("Hello Sass!");
+}
+
+.test-quote-3 {
+  content: quote(ImWebDesigner);
+}
+
+.test-quote-4 {
+  content: quote(' ');
+}
+
+/*字符串函数-To-upper-case()、To-lower-case()*/
+.test-to-upper-case {
+  text: to-upper-case(aaaaa);
+  text: to-upper-case(aA-aAAA-aaa);
+}
+
+.test-to-lower-case {
+  text: to-lower-case(AAAAA);
+  text: to-lower-case(aA-aAAA-aaa);
+}
+
+/*
+数字函数
+percentage($value)：将一个不带单位的数转换成百分比值；
+round($value)：将数值四舍五入，转换成一个最接近的整数；
+ceil($value)：将大于自己的小数转换成下一位整数；
+floor($value)：将一个数去除他的小数部分；
+abs($value)：返回一个数的绝对值；
+min($numbers…)：找出几个数值之间的最小值；
+max($numbers…)：找出几个数值之间的最大值；
+random(): 获取随机数
+ */
+/*数字函数-percentage()*/
+.test-percentage {
+  width: percentage(.2); //20%
+  height: percentage(2px / 10px); //20%
+  border-radius: percentage(2em / 10em); //20%
+}
+
+/*
+数字函数-round()函数
+round(12.3); >> 12
+round(12.5); >>13
+round(1.49999); >> 1
+round(2.0); >> 2
+round(20 %); >> 20%
+round(2.2 %); >> 2%
+ */
+.test-round {
+  width: round(3.9em); //4em
+  height: round(2.3px); //2px
+  line-height: round(2px / 3px); //1
+  border-radius: round(1px / 3px); //0
+}
+
+/*
+数字函数-ceil()函数
+ceil(2.0) >> 2
+ceil(2.1) >> 3
+ceil(2.6) >> 3
+ceil(2.3%) >> 3%
+ceil(2.3px) >> 3px
+ceil(2.5px) >> 3px
+ceil(2px / 3px) >> 1
+ */
+.test-ceil {
+  width: ceil(12.3px); //13px
+}
+
+/*
+数字函数-floor()函数
+floor(2.1) >> 2
+floor(2.5) >> 2
+floor(3.5%) >> 3%
+floor(10.2px) >> 10px
+floor(10.8em) >> 10em
+floor(2px / 10px) >> 0
+ */
+.test-floor {
+  width: floor(12.3px); //12px
+}
+
+/*
+数字函数-abs()函数
+abs(10) >> 10
+abs(-10) >> 10
+abs(-10px) >> 10px
+abs(-2em) >> 2em
+abs(-.5%) >> 0.5%
+abs(-1px / 2px) >> 0.5
+ */
+.test-abs {
+  width: abs(-12.3px); //12.3px
+}
+
+/*
+数字函数-min()函数、max()函数
+min(1,2,1%,3,300%) >> 1%
+min(1px,2,3px) >> 1px
+min(1em,2em,6em) >> 1em
+ */
+.test-min-max {
+  line-height: min(6, 50, 10%, 2, 300%); //2
+  height: max(10px, 23px); //23px
+}
+
+/*
+数字函数-random()
+ */
+.test-random {
+  line-height: random();
+}
+
+/*
+列表函数
+length($list)：返回$list长度（如果不是list,返回1）
+nth($list,$index)：返回$list中第$index列表项值（如果索引值不在列表范围内，将会报错）
+index($list,$value)：返回$value在$list中的位置
+append($list,$value[,$separator])：使用$separator分隔符将$value列表项添加到$list最后（如果没有显式指定$separator分隔符，会以当前分隔符分隔）
+join($list-1,$list-2[,$separator]):使用$separator分隔符将$list-2附加到$list-1（如果没有显式指定分隔符，将对$list-1中的分隔符）
+zip(*$lists):将多个$list组合在一起成为一个多维列表。如果列表源长度并不是所有都相同，结果列表长度将以最短的一个为准
+reject($list,$value)：这是Compass中的一个函数，将$value值从$list中删除
+compact(*$args)：Compass函数，返回一个删除非真值的新列表
+ */
+/*
+列表函数-length()函数
+length(10px) >> 1
+length(border 1px solid) >> 3
+length(10px 20px (border 1px solid) 2em) >> 4
+ */
+.test-length {
+  line-height: length(border 1px solid); //3
+}
+
+/*
+列表函数-nth()函数
+nth(10px 20px 30px,1) >> 10px
+nth((Helvetica,Arial,sans-serif),2) >> Arial
+nth((1px solid red) border-top green,1) >> (1px "solid" #ff0000)
+ */
+.test-nth {
+  font-family: nth((Helvetica, Arial, sans-serif), 2); //Arial
+}
+
+/*
+列表函数-index()函数
+index(1px solid red, 1px) >> 1
+index(1px solid red, solid) >> 2
+index(1px solid red, red) >> 3
+ */
+.test-index {
+  line-height: index(1px solid red, 1px); //1
+}
+
+/*
+列表函数-append()函数
+append(10px 20px ,30px) >> (10px 20px 30px)
+append((10px,20px),30px) >> (10px, 20px, 30px)
+append(green,red) >> (#008000,#ff0000)
+append(red,(green,blue)) >> (#ff0000,(#008000, #0000ff))
+ */
+.test-append {
+  color: append((blue, green), red, space);
+}
+
+/*
+列表函数-join()函数
+join(10px 20px, 30px 40px) >> (10px 20px 30px 40px)
+join((blue,red),(#abc,#def)) >> (#0000ff, #ff0000, #aabbcc, #ddeeff)
+join((blue,red), join((#abc,#def),(#dee,#eff))) >> (#0000ff, #ff0000, #aabbcc, #ddeeff, #ddeeee, #eeffff)
+ */
+$join-list: join((blue, green), (red, orange)); //red
+.test-join {
+  color: nth($join-list, 3); //red
+}
+
+/*
+列表函数-zip()函数
+ */
+$zip-list: zip((1px, 2px, 3px), (solid, dashed, dotted), (green, blue, red));
+.test-zip {
+  border: nth($zip-list, 2); //2px dashed #0000ff
+}
+
+/*
+Introspection函数
+type-of($value)：返回一个值的类型
+unit($number)：返回一个值的单位
+unitless($number)：判断一个值是否带有单位
+comparable($number-1, $number-2)：判断两个值是否可以做加、减和合并
+ */
+/*
+Introspection函数-type-of()函数
+number 为数值型。
+string 为字符串型。
+bool 为布尔型。
+color 为颜色型。
+ */
+.test-type-of {
+  &:before {
+    content: type-of(1)+""; //number
+  }
+}
+
+/*
+Introspection函数-unit()函数
+unit(100) >> ""
+unit(100px) >> "px"
+unit(20%) >> "%"
+unit(1em) >> "em"
+unit(10px * 3em) >> "em*px"
+unit(10px / 3em) >> "px/em"
+unit(10px * 2em / 3cm / 1rem) >> "em/rem"
+ */
+.test-unit {
+  &:before {
+    content: unit(100px)+""; //px
+  }
+}
+
+/*
+Introspection函数-unitless()函数
+unitless(100) >> true
+unitless(100px) >> false
+unitless(100em) >> false
+unitless(100%) >> false
+unitless(1 /2 ) >> true
+unitless(1 /2 + 2 ) >> true
+unitless(1px /2 + 2 ) >> false
+ */
+$boolean-unitless: unitless(100); //true
+.test-unitless {
+  @if $boolean-unitless {
+    display: block;
+  }
+}
+
+/*
+Introspection函数-comparable()函数
+comparable(2px,1px) >> true
+comparable(2px,1%) >> false
+comparable(2px,1em) >> false
+comparable(2rem,1em) >> false
+comparable(2px,1cm) >> true
+comparable(2px,1mm) >> true
+comparable(2px,1rem) >> false
+comparable(2cm,1mm) >> true
+ */
+$boolean-comparable: comparable(2px, 1em); //true
+.test-comparable {
+  @if $boolean-comparable {
+    display: block;
+  }
+}
+
+/*
+Miscellaneous函数
+在这里把 Miscellaneous 函数称为三元条件函数，主要因为他和 JavaScript 中的三元判断非常的相似。
+他有两个值，当条件成立返回一种值，当条件不成立时返回另一种值：
+if(true,1px,2px) >> 1px
+if(false,1px,2px) >> 2px
+ */
+.test-if {
+  margin: if(false, 1px, 2px); //2px
+}
+/*变量MAP
+map-get($map,$key)：根据给定的key值，返回map中相关的值。
+map-merge($map1,$map2)：将两个map合并成一个新的map。
+map-remove($map,$key)：从map中删除一个key，返回一个新map。
+map-keys($map)：返回map中所有的key。
+map-values($map)：返回map中所有的value。
+map-has-key($map,$key)：根据给定的key值判断map是否有对应的value值，如果有返回true，否则返回false。
+keywords($args)：返回一个函数的参数，这个参数可以动态的设置key和value。
+*/
+
+/*自定义函数*/
+@function double($n) {
+  @return $n * 2;
+}
+
+#sidebar {
+  width: double(5px);
+}

@@ -4,16 +4,19 @@
   border: 1px solid red;
   background-color: #fdd;
 }
+
 .seriousError {
   @extend .error;
   border-width: 3px;
 }
+
 /*.seriousError从.error继承样式*/
 /*应用到.seriousError a*/
-.error a{
+.error a {
   color: red;
   font-weight: 100;
 }
+
 /*应用到hl.seriousError*/
 h1.error {
   font-size: 1.2rem;
