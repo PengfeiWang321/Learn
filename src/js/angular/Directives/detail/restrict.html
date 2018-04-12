@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div ng-app="myApp">
+    <!-- E (element) -->
+    <directiveName title="directiveName-E"></directiveName>
+    <directive-name title="directive-name-E"></directive-name>
+    <!-- A (attribute) -->
+    <div directiveName="expression" title="directiveName-A"></div>
+    <div directive-name="expression" title="directive-name-A"></div>
+    <!-- C (class) -->
+    <div class="directiveName" title="directiveName-C"></div>
+    <div class="directive-name" title="directive-name-C"></div>
+    <!-- M(comment) -->
+    <!--directive:directiveName expression-->
+    <!--directive:directive-name expression-->
+</div>
+<script src="//cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+<script>
+    var app = angular.module('myApp', []);
+    app.directive('directiveName', function () {
+        return {
+            restrict: 'EACM',
+            replace: true,//如果不设置对M类型不起作用
+            template: function(element, attrs) {
+                return '<div>'+ attrs.title +'</div>'
+            }
+        };
+    });
+</script>
+</body>
+</html>
