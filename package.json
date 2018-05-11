@@ -12,6 +12,7 @@
     "express": "^4.15.3",
     "gulp-ruby-sass": "^2.1.1",
     "run-sequence": "^2.1.0",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "vue": "^2.5.16"
   }
 }
