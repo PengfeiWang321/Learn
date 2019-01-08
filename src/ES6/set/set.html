@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>generator.html</title>
+    <script>
+        // 例一
+        const set1 = new Set([1, 2, 3, 4, 4]);
+        [...set1]
+        // [1, 2, 3, 4]
+        // 例二
+        const set2 = new Set([1, 2, 3, 4, 5, 5, 5, 5]);
+        set2.size // 5
+        // 例三
+        const set3 = new Set(document.querySelectorAll('div'));
+        set3.size // 56
+        // 类似于
+        const set4 = new Set();
+        document
+            .querySelectorAll('div')
+            .forEach(div => set4.add(div));
+        set4.size // 56
+
+        // 遍历
+        let set = new Set(['red', 'green', 'blue']);
+        for (let item of set.keys()) {
+            console.log(item);
+        }
+        // red
+        // green
+        // blue
+        for (let item of set.values()) {
+            console.log(item);
+        }
+        // red
+        // green
+        // blue
+        for (let item of set.entries()) {
+            console.log(item);
+        }
+        // ["red", "red"]
+        // ["green", "green"]
+        // ["blue", "blue"]
+
+        // 除数组的重复成员
+        let arr = [3, 5, 2, 2, 5, 5];
+        let unique = [...new Set(arr)];
+        // [3, 5, 2]
+        let a = new Set([1, 2, 3]);
+        let b = new Set([4, 3, 2]);
+        // 并集
+        let union = new Set([...a, ...b]);
+        // Set {1, 2, 3, 4}
+        // 交集
+        let intersect = new Set([...a].filter(x => b.has(x)));
+        // set {2, 3}
+        // 差集
+        let difference = new Set([...a].filter(x => !b.has(x)));
+        // Set {1}
+    </script>
+</head>
+<body>
+
+</body>
+</html>

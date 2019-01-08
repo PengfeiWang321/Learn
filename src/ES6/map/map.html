@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>generator.html</title>
+    <script>
+        /*
+         JavaScript 的对象（Object），本质上是键值对的集合（Hash 结构），但是传统上只能用字符串当作键。这给它的使用带来了很大的限制。
+        */
+        const data = {};
+        const element = document.getElementById('myDiv');
+        data[element] = 'metadata';
+        data['[object HTMLDivElement]'] // "metadata"
+
+        // 使用 Map 结构的set方法，将对象o当作m的一个键，然后又使用get方法读取这个键，接着使用delete方法删除了这个键。
+        const m = new Map();
+        const o = {p: 'Hello World'};
+        m.set(o, 'content');
+        m.get(o);// "content"
+        m.has(o);// true
+        m.delete(o);// true
+        m.has(o);// false
+
+        //遍历
+        const map = new Map([
+            [1, 'one'],
+            [2, 'two'],
+            [3, 'three'],
+        ]);
+        [...map.keys()];
+        // [1, 2, 3]
+        [...map.values()];
+        // ['one', 'two', 'three']
+        [...map.entries()];
+        // [[1,'one'], [2, 'two'], [3, 'three']]
+        [...map];
+        // [[1,'one'], [2, 'two'], [3, 'three']]
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
