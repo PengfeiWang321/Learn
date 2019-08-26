@@ -4,3 +4,4 @@ node_modules/
 react-example/node_modules/
 dist/
 .sass-cache/
+learn.iml

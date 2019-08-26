@@ -15,14 +15,19 @@
             <version>1.16.18</version>
             <scope>provided</scope>
         </dependency>
-        <!--apk-->
-        <dependency>
-            <groupId>AXmlResourceParser</groupId>
-            <artifactId>AXmlResourceParser</artifactId>
-            <version>0.0.1</version>
-        </dependency>
     </dependencies>
     <build>
+        <resources>
+            <resource>
+                <directory>src/java/resource</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.tld</include>
+                    <include>**/*.js</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
