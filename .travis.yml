@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "12"
+services:
+  - docker
+
+before_install:
+  - cd react-example && npm install
+
+script:
+  - cd react-example && npm run bulid
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t 1015088819/learn:latest .
+  - docker push 1015088819/learn:latest

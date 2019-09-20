@@ -9,7 +9,8 @@
     "react-dom": "^16.3.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "spdx-license-ids": "^3.0.5"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
